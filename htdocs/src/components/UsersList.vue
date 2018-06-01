@@ -1,7 +1,8 @@
 <template>
     <div class="users">
 		<ul>
-			<li v-for="user in users">
+			<li v-for="user in users"
+                :key="user.id">
 				{{user.firstname}} {{user.lastname}}
 			</li>
 		</ul>
@@ -29,7 +30,7 @@ export default {
         overflow: hidden;
         text-align: center;
         margin: 0 auto;
-        width: 15%;
+        width: 40%;
         ul {
             list-style: none;
             

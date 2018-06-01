@@ -81,7 +81,7 @@
       </li>
     </ul>
 
-	<Users/>
+	<UsersList/>
 
 	<div class="iput">
 		<h2 class="input-text" v-text="input_val"></h2>
@@ -91,12 +91,15 @@
 	<div class="counter">
 		<button class="btn btn-primary" v-on:click="counter++">You clicked the counter {{counter}} times! </button>
 	</div>
+
+	<NewsList/>
   </div>
   
 </template>
 
 <script>
-import Users from './Users.vue'
+import UsersList from './UsersList.vue';
+import NewsList from './NewsList.vue';
 
 export default {
   name: "HelloWorld",
@@ -108,7 +111,8 @@ export default {
     };
   },
   components: {
-	  Users
+	  UsersList,
+	  NewsList
   }
 };
 </script>
