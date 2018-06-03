@@ -81,18 +81,6 @@
       </li>
     </ul>
 
-	<UsersList/>
-
-	<div class="iput">
-		<h2 class="input-text" v-text="input_val"></h2>
-		<input type="text" v-model="input_val">
-	</div>
-
-	<div class="counter">
-		<button class="btn btn-primary" v-on:click="counter++">You clicked the counter {{counter}} times! </button>
-	</div>
-
-	<NewsList/>
   </div>
   
 </template>
@@ -106,13 +94,11 @@ export default {
   data() {
     return {
 	  msg: "Welcome to Your Vue.js App, Willz",
-	  input_val: '',
-	  counter: 0
+	  
     };
   },
   components: {
-	  UsersList,
-	  NewsList
+	  
   }
 };
 </script>
