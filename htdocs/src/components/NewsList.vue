@@ -4,14 +4,15 @@
         <div v-if="results.length > 1">
             <div v-for="result in results" :key="result.id">
                 <pre>{{ result.acf.development_name }}</pre>
-                <pre> {{result}} </pre>
+                <img :src="result.acf.icon_link_3_image_small.url" alt="">
             </div>
         </div>
         
         <div v-else>
-            <pre>
-                {{results}}
-            </pre>
+            <h1>
+                {{results.title.rendered}}
+            </h1>
+            <img :src="results.acf.icon_link_3_image_small.url" alt="">
         </div>
     </div>
 </template>
@@ -22,8 +23,8 @@ import axios from 'axios'
 
 const NYTBaseUrl = "https://api.nytimes.com/svc/topstories/v2/";
 const SeddonURL = "https://www.seddonhomes.co.uk/wp-json/wp/v2/pages/15883";
-const SeddonLocalURL = "http://dev.seddonredesign.local/wp-json/wp/v2/pages/";
-const SeddonLocalACFURL = "http://dev.seddonredesign.local/wp-json/wp/v2/development/";
+const SeddonLocalURL = "http://dev.seddonhomes.local/wp-json/wp/v2/pages/";
+const SeddonLocalACFURL = "http://dev.seddonhomes.local/wp-json/wp/v2/development/";
 const ApiKey = "ade9e2bb7b8a46d08b3f315431baa2f5";
 
 function buildUrl (url) {
