@@ -6,6 +6,7 @@
     <router-link to="/input">Text Input</router-link>
     <router-link to="/users">Users</router-link>
     <router-link to="/counter">Counter</router-link>
+    <router-link to="/developments">Developmnets</router-link>
     <router-view></router-view>
     
   </div>

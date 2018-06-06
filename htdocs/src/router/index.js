@@ -5,6 +5,8 @@ import NewsList from "@/components/NewsList.vue";
 import TextInput from "@/components/TextInput.vue";
 import UsersList from "@/components/UsersList.vue";
 import CounterButton from "@/components/CounterButton.vue";
+import ClickDevelopment from "@/components/ClickDevelopment.vue";
+
 
 
 Vue.use(Router)
@@ -34,6 +36,12 @@ export default new Router({
             path: '/counter',
             name: 'Counter Button',
             component: CounterButton
+        },
+        {
+          path: '/developments',
+          name: 'Developments',
+          component: ClickDevelopment
         }
+
     ]
 })
